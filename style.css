@@ -1,0 +1,160 @@
+body{
+margin:0;
+font-family:Poppins;
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+scroll-behavior:smooth;
+}
+
+/* LOADER */
+#loader{
+position:fixed;
+inset:0;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+color:red;
+z-index:9999;
+}
+
+/* NAVBAR GLASS */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:15px 25px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,0.1);
+z-index:1000;
+}
+
+.logo{color:#ff2e2e;font-weight:900;}
+
+.nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav a:hover{
+color:#ff2e2e;
+transform:scale(1.1);
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74') center/cover;
+}
+
+.big-title{
+font-size:75px;
+color:#ff2e2e;
+text-shadow:0 0 40px red;
+animation:zoom 2s infinite alternate;
+}
+
+@keyframes zoom{
+from{transform:scale(1);}
+to{transform:scale(1.08);}
+}
+
+/* BUTTON */
+.btn{
+padding:14px 32px;
+background:#ff2e2e;
+border:none;
+color:white;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.2);
+box-shadow:0 0 35px red;
+}
+
+/* GLASS CARDS + 3D EFFECT */
+.card{
+display:inline-block;
+margin:15px;
+padding:25px;
+width:280px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:16px;
+backdrop-filter:blur(12px);
+transition:0.5s;
+transform-style:preserve-3d;
+animation:float 4s infinite ease-in-out;
+}
+
+.card:hover{
+transform:rotateY(10deg) scale(1.15);
+box-shadow:0 0 40px red;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+opacity:0;
+transform:translateY(80px);
+transition:1s;
+}
+
+.reveal.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* PAGE TRANSITION */
+body{
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+/* INPUT */
+input,textarea{
+padding:12px;
+width:80%;
+margin:10px;
+border:none;
+border-radius:10px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:green;
+color:white;
+padding:15px;
+border-radius:50px;
+text-decoration:none;
+box-shadow:0 0 20px green;
+  }
